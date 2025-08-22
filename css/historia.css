@@ -1,0 +1,353 @@
+/* Variables */
+:root {
+    --primary-color: #8B0000;
+    --secondary-color: #DAA520;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --timeline-color: var(--primary-color);
+}
+
+/* Reset y estilos base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.history-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    color: var(--secondary-color);
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+.nav-title {
+    text-align: center;
+}
+
+.nav-title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-title p {
+    margin: 0.3rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-controls button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-controls button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Contenedor principal */
+.history-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Línea de tiempo */
+/* Agrega esto al final de tu archivo historia.css */
+
+/* Estilos para las imágenes en la línea de tiempo */
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    min-height: 200px; /* Asegura espacio para la imagen */
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Posicionamiento diferente para elementos pares e impares */
+.timeline-item:nth-child(odd)::after {
+    left: 55%;
+    right: auto;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: auto;
+    right: 55%;
+}
+/* Modifica estos valores en tu CSS existente */
+.timeline-item::after {
+    width: 500px;  /* Aumenté de 200px a 300px */
+    height: 500px; /* Aumenté de 150px a 225px (manteniendo relación 4:3) */
+    /* resto de propiedades... */
+}
+.timeline-content {
+    width: 40%; /* Reduje de 45% a 40% para dar más espacio a la imagen */
+}
+
+/* Ajusta la posición para elementos pares e impares */
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: 60%; /* Aumenté de 55% a 60% */
+}
+
+/* Imágenes específicas para cada evento */
+.timeline-item:nth-child(1)::after {
+    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Ffundacion.png?v=1748467032347");
+}
+
+.timeline-item:nth-child(2)::after {
+    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Fhistoria1.jpg?v=1748467042503");
+}
+
+.timeline-item:nth-child(3)::after {
+    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Fhistoria2.jpg?v=1748467045751");
+}
+
+.timeline-item:nth-child(4)::after {
+    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Fequipos-vintage.jpeg?v=1748467025855");
+}
+
+.timeline-item:nth-child(5)::after {
+    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2FRADIO-PIO-XII.jpg?v=1748467052612");
+}
+
+.timeline-item:nth-child(6)::after {
+    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2FRADIO.jpg?v=1748467055509");
+}
+
+
+/* Ajuste para tema oscuro */
+.dark-theme .timeline-item::after {
+    filter: brightness(0.9);
+}
+/* ********* */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: var(--timeline-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: 55%;
+}
+
+.timeline-content h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.timeline-theory {
+    margin-top: 1rem;
+}
+
+.timeline-theory p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.timeline-theory ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.timeline-theory li {
+    margin-bottom: 0.5rem;
+}
+
+.timeline-theory strong {
+    color: var(--primary-color);
+}
+
+/* Análisis teórico */
+.historical-analysis {
+    margin: 4rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid #ddd;
+}
+
+.historical-analysis h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.historical-analysis h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+.theory-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.theory-card h3 {
+    color: var(--dark-color);
+    margin-top: 0;
+}
+
+.theory-card ul {
+    padding-left: 1.5rem;
+}
+
+/* Footer */
+.history-footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--dark-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.history-footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 80px);
+        left: 60px;
+    }
+    
+    .history-nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .back-button {
+        margin-bottom: 1rem;
+        align-self: flex-start;
+    }
+    
+    .nav-controls {
+        margin-top: 1rem;
+    }
+}
+
+/* Efectos de tema oscuro */
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --light-color: #1e1e1e;
+    --dark-color: #f5f5f5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.dark-theme .timeline-content,
+.dark-theme .theory-card {
+    background: #1e1e1e;
+    color: var(--text-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .theory-card h3 {
+    color: var(--secondary-color);
+}

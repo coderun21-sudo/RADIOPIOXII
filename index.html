@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Pío XII - Patrimonio Cultural Digital</title>
+    <meta name="description" content="Sitio web oficial del patrimonio cultural de Radio Pío XII, la voz de los mineros bolivianos">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+
+    <nav class="glass-nav">
+        <div class="logo-3d">
+          <img src="https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Flogo.png?v=1748467048062" alt="Radio Pío XII" data-tilt>
+        </div>
+        <ul>
+            <li><a href="index.html" class="hvr-underline-from-center">Inicio</a></li>
+            <li><a href="paginas/historia.html" class="hvr-underline-from-center">Historia</a></li>
+            <li><a href="paginas/3D.html" class="hvr-underline-from-center">Tour 3D</a></li>
+            <li><a href="paginas/galeria.html" class="hvr-underline-from-center">Galeria</a></li>
+            <li><a href="paginas/contacto.html" class="hvr-underline-from-center">Contacto</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header class="parallax-hero" id="hero">
+        <div class="particles" id="particles-js"></div>
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInDown">
+                <span class="text-stroke">Radio Pío XII</span><br>
+                <small>1959 - 2025</small>
+            
+            </h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">La voz que desafió al tiempo</p>
+            <a href="paginas/3D.html" class="cta-button animate__animated animate__fadeInUp animate__delay-2s">
+                <span>Explora en 3D</span>
+                <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+        </div>
+    </header>
+
+    <section class="presentation">
+        <div class="video-container">
+            <img src="/img/iglesia.jpeg" alt="Estudio 1960">
+            <div class="overlay"></div>
+        </div>
+        <div class="content">
+            <h2>Un viaje por la historia minera de Bolivia</h2>
+            <p>Radio Pío XII no fue solo una emisora, fue el corazón de las luchas sociales en el altiplano boliviano. Durante décadas, sus transmisiones unieron a las comunidades mineras y documentaron un capítulo crucial de la historia boliviana.</p>
+            <a href="paginas/historia.html" class="learn-more">
+                Conoce nuestra historia
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="icon-container">
+                <i class="fas fa-microphone-alt"></i>
+            </div>
+            <h3>Voces Históricas</h3>
+            <p>Archivos sonoros de programas emblemáticos y testimonios de locutores y trabajadores mineros.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon-container">
+                <i class="fas fa-vr-cardboard"></i>
+            </div>
+            <h3>Tour Inmersivo</h3>
+            <p>Recorre las instalaciones originales en un modelo 3D interactivo con realidad virtual.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="icon-container">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Documentación</h3>
+            <p>Acceso a documentos históricos, fotografías y material de archivo digitalizado.</p>
+        </div>
+    </section>
+
+    <footer class="footer-3d">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Radio Pío XII</h3>
+                <p>Patrimonio Cultural Digital</p>
+                <p>Llallagua Universidad Nacional "Siglo XX"</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="paginas/historia.html">Historia</a></li>
+                    <li><a href="paginas/3D.html">Tour Virtual</a></li>
+                    <li><a href="paginas/archivo.html">Archivo Digital</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>contacto@radiopioxii.edu.bo</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Radio Pío XII - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Radio Pío XII</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS (Mapa) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="history-nav">
+        <div class="nav-container">
+            <!-- Botón de volver mejorado -->
+            <a href="../index.html" class="back-button animate__animated animate__fadeInLeft" aria-label="Volver al inicio">
+                <i class="fas fa-arrow-left"></i>
+                <span class="button-text">Volver al Inicio</span>
+            </a>
+            
+            <!-- Título central con animación -->
+            <div class="nav-title animate__animated animate__fadeInDown">
+                <h1>
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span class="main-title">Radio Pío XII</span>
+                    <span class="sub-title">Patrimonio Histórico</span>
+                </h1>
+            </div>
+            
+            <!-- Controles de navegación mejorados -->
+            <div class="nav-controls animate__animated animate__fadeInRight">
+                <!-- Botón de búsqueda discreto -->
+                <button class="nav-search" aria-label="Buscar en el sitio">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <!-- Menú hamburguesa para móviles -->
+                <button class="mobile-menu-toggle" aria-label="Menú de navegación">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Menú principal completo para desktop -->
+                <div class="main-menu">
+                    <a href="../paginas/historia.html" class="menu-item">
+                        <i class="fas fa-history"></i>
+                        <span>Historia</span>
+                    </a>
+                    <a href="../paginas/tour.html" class="menu-item">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <span>Tour 3D</span>
+                    </a>
+                    <a href="../paginas/galeria.html" class="menu-item">
+                        <i class="fas fa-photo-video"></i>
+                        <span>Archivo</span>
+                    </a>
+                    <a href="../paginas/contacto.html" class="menu-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contacto</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Barra de progreso (opcional) -->
+        <div class="nav-progress">
+            <div class="progress-bar"></div>
+        </div>
+    </nav>
+
+    <!-- Header de contacto -->
+    <header class="contact-header">
+        <div class="header-content">
+            <h1>Contacta con Nosotros</h1>
+            <p>Visítanos, escríbenos o síguenos en redes sociales</p>
+        </div>
+    </header>
+
+    <!-- Sección principal de contacto -->
+    <main class="contact-container">
+        <!-- Mapa GPS interactivo -->
+        <section class="map-section">
+            <h2><i class="fas fa-map-marked-alt"></i> Nuestra Ubicación</h2>
+            <div id="radioMap"></div>
+            <div class="map-info">
+                <p><strong>Dirección:</strong> Calle Bolívar #123, Llallagua, Potosí, Bolivia</p>
+                <p><strong>Coordenadas GPS:</strong> -18.4241°, -66.5839°</p>
+                <button id="openDirections" class="btn">
+                    <i class="fas fa-directions"></i> Cómo llegar
+                </button>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section class="form-section">
+            <h2><i class="fas fa-envelope"></i> Escríbenos</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <select id="subject" name="subject">
+                        <option value="consulta">Consulta general</option>
+                        <option value="archivo">Acceso al archivo histórico</option>
+                        <option value="donacion">Donación de material</option>
+                        <option value="visita">Visita guiada</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Enviar mensaje
+                </button>
+            </form>
+        </section>
+
+        <!-- Información de contacto adicional -->
+        <section class="info-section">
+            <h2><i class="fas fa-info-circle"></i> Más formas de contactarnos</h2>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Teléfonos</h3>
+                    <p>+591 2 1234567</p>
+                    <p>+591 71234567 (WhatsApp)</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Correos</h3>
+                    <p>contacto@radiopioxii.org.bo</p>
+                    <p>archivo@radiopioxii.org.bo</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <h3>Transmisión</h3>
+                    <p>FM 98.5 MHz (Llallagua)</p>
+                    <p>Streaming en vivo 24/7</p>
+                </div>
+            </div>
+
+            <!-- Horario de atención -->
+            <div class="schedule">
+                <h3><i class="far fa-clock"></i> Horario de atención</h3>
+                <ul>
+                    <li><strong>Lunes a Viernes:</strong> 8:00 - 18:00</li>
+                    <li><strong>Sábados:</strong> 9:00 - 14:00</li>
+                    <li><strong>Domingos:</strong> Cerrado</li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="social-media">
+                <h3><i class="fas fa-hashtag"></i> Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/radiopioxii" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/radiopioxii" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://youtube.com/radiopioxii" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://instagram.com/radiopioxii" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com/@radiopioxii" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="../img/logo.png" alt="Radio Pío XII" class="footer-logo">
+                <p>Preservando el patrimonio histórico de la radio minera boliviana desde 1959</p>
+                <p class="copyright">&copy; 2023 Radio Pío XII. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../paginas/historia.html">Línea de tiempo</a></li>
+                    <li><a href="../paginas/tour.html">Tour virtual</a></li>
+                    <li><a href="../paginas/galeria.html">Archivo histórico</a></li>
+                    <li><a href="../paginas/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Llallagua, Potosí, Bolivia</p>
+                <p><i class="fas fa-phone"></i> +591 2 1234567</p>
+                <p><i class="fas fa-envelope"></i> contacto@radiopioxii.org.bo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Leaflet JS (Mapa) -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="../js/main.js"></script>
+    <script src="../js/contacto.js"></script>
+</body>
+</html>
