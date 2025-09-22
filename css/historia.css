@@ -92,10 +92,6 @@ body {
     margin: 2rem auto;
     padding: 0 2rem;
 }
-
-/* Línea de tiempo */
-/* Agrega esto al final de tu archivo historia.css */
-
 /* Estilos para las imágenes en la línea de tiempo */
 .timeline-item {
     position: relative;
@@ -130,12 +126,11 @@ body {
 }
 /* Modifica estos valores en tu CSS existente */
 .timeline-item::after {
-    width: 500px;  /* Aumenté de 200px a 300px */
-    height: 500px; /* Aumenté de 150px a 225px (manteniendo relación 4:3) */
-    /* resto de propiedades... */
+    width: 500px; 
+    height: 500px; 
 }
 .timeline-content {
-    width: 40%; /* Reduje de 45% a 40% para dar más espacio a la imagen */
+    width: 40%; 
 }
 
 /* Ajusta la posición para elementos pares e impares */
@@ -149,11 +144,11 @@ body {
 
 /* Imágenes específicas para cada evento */
 .timeline-item:nth-child(1)::after {
-    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Ffundacion.png?v=1748467032347");
+    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Fhistoria1.jpg?v=1748467042503");
 }
 
 .timeline-item:nth-child(2)::after {
-    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Fhistoria1.jpg?v=1748467042503");
+    background-image: url("https://cdn.glitch.global/5edb37ee-cb42-4b14-8e9f-f0e52fa85b0d/RadioPioXII%2Fimg%2Ffundacion.png?v=1748467032347");
 }
 
 .timeline-item:nth-child(3)::after {

@@ -9,63 +9,31 @@
     <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <!-- Estilos -->
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/galeria.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
     <nav class="history-nav">
         <div class="nav-container">
-            <!-- Botón de volver con mejor feedback -->
-            <a href="../index.html" class="back-button animate__animated animate__fadeInLeft" aria-label="Volver al inicio">
-                <i class="fas fa-arrow-left"></i> 
-                <span class="button-text">Volver al Inicio</span>
-            </a>
-            
-            <!-- Título central con logo -->
-            <div class="nav-title animate__animated animate__fadeInDown">
-                <img src="../img/logo.png" alt="Logo Radio Pío XII" class="nav-logo">
-                <h1>Galería de Imágenes Históricas</h1>
-            </div>
-            
-            <!-- Controles de navegación mejorados -->
-            <div class="nav-controls animate__animated animate__fadeInRight">
-                
-                <!-- Menú desplegable -->
-                <div class="dropdown">
-                    <button class="dropdown-toggle" aria-label="Menú de opciones">
-                        <i class="fas fa-ellipsis-v"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="../paginas/historia.html"><i class="fas fa-history"></i> Línea de Tiempo</a>
-                        <a href="../paginas/tour.html"><i class="fas fa-vr-cardboard"></i> Tour Virtual</a>
-                        <a href="../paginas/contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
-                        <a href="../paginas/acerca.html"><i class="fas fa-info-circle"></i> Acerca de</a>
-                    </div>
-                </div>
-            </div>
+          <a href="../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <span class="button-text">Volver al Inicio</span>
+          </a>
+      
+          <div class="nav-title">
+            <h1>Galería de Imágenes Históricas</h1>
+          </div>
         </div>
-        
-        <!-- Barra de progreso para secciones -->
-        <div class="nav-progress">
-            <div class="progress-bar"></div>
-        </div>
-    </nav>
-
-    <!-- Header de la galería -->
-    <header class="gallery-header">
-        <div class="header-content">
-            <h1>Archivo Histórico</h1>
-            <p>Explora nuestro patrimonio audiovisual: fotografías, programas de radio y documentos históricos</p>
-        </div>
-    </header>
+      </nav>
+      
+      <header class="gallery-header">
+        <!-- Visor 360 de fondo -->
+        <div id="visor360"></div>
+      </header>
 
     <!-- Filtros de galería -->
     <div class="gallery-filters">
         <button class="filter-btn active" data-filter="all">Todo</button>
         <button class="filter-btn" data-filter="fotos">Fotografías</button>
-        <button class="filter-btn" data-filter="audios">Audios</button>
-        <button class="filter-btn" data-filter="documentos">Documentos</button>
         <button class="filter-btn" data-filter="videos">Videos</button>
     </div>
 
@@ -73,7 +41,7 @@
     <main class="gallery-container">
         <!-- Sección de Fotografías -->
         <section class="gallery-section" id="fotos">
-            <h2 class="section-title"><i class="fas fa-camera"></i> Fototeca Histórica</h2>
+            <h2 class="section-title"><i class="fas fa-camera"></i> Fotografías</h2>
             <div class="gallery-grid">
                 <!-- Item 1 -->
                 <div class="gallery-item" data-category="fotos" data-year="1960">
@@ -131,122 +99,6 @@
             </div>
         </section>
 
-        <!-- Sección de Audios -->
-        <section class="gallery-section" id="audios">
-            <h2 class="section-title"><i class="fas fa-volume-up"></i> Audioteca</h2>
-            <div class="audio-grid">
-                <!-- Audio 1 -->
-                <div class="audio-item" data-category="audios" data-year="1965">
-                    <div class="audio-player">
-                        <h3>Programa especial - Aniversario 6°</h3>
-                        <p>1965 | Celebración del 6° aniversario</p>
-                        <audio controls>
-                            <source src="../audio/programas/aniversario-1965.mp3" type="audio/mpeg">
-                            Tu navegador no soporta el elemento de audio.
-                        </audio>
-                        <div class="audio-meta">
-                            <span><i class="fas fa-clock"></i> 28:45 min</span>
-                            <span><i class="fas fa-download"></i> Descargar</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Audio 2 -->
-                <div class="audio-item" data-category="audios" data-year="1978">
-                    <div class="audio-player">
-                        <h3>Noticiero minero</h3>
-                        <p>1978 | Cobertura de la huelga general</p>
-                        <audio controls>
-                            <source src="../audio/programas/noticiero-1978.mp3" type="audio/mpeg">
-                            Tu navegador no soporta el elemento de audio.
-                        </audio>
-                        <div class="audio-meta">
-                            <span><i class="fas fa-clock"></i> 15:30 min</span>
-                            <span><i class="fas fa-download"></i> Descargar</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Audio 3 -->
-                <div class="audio-item" data-category="audios" data-year="1982">
-                    <div class="audio-player">
-                        <h3>Entrevista a líder sindical</h3>
-                        <p>1982 | Durante el proceso de democratización</p>
-                        <audio controls>
-                            <source src="../audio/programas/entrevista-1982.mp3" type="audio/mpeg">
-                            Tu navegador no soporta el elemento de audio.
-                        </audio>
-                        <div class="audio-meta">
-                            <span><i class="fas fa-clock"></i> 42:15 min</span>
-                            <span><i class="fas fa-download"></i> Descargar</span>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- Sección de Documentos -->
-        <section class="gallery-section" id="documentos">
-            <h2 class="section-title"><i class="fas fa-file-alt"></i> Documentos Históricos</h2>
-            <div class="documents-grid">
-                <!-- Documento 1 -->
-                <div class="doc-item" data-category="documentos" data-year="1959">
-                    <a href="../docs/fundacion-1959.pdf" target="_blank">
-                        <div class="doc-icon">
-                            <i class="fas fa-file-pdf"></i>
-                        </div>
-                        <div class="doc-info">
-                            <h3>Acta de fundación</h3>
-                            <p>1959 | Documento original de creación</p>
-                            <span class="doc-size">PDF - 2.4 MB</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- Documento 2 -->
-                <div class="doc-item" data-category="documentos" data-year="1971">
-                    <a href="../docs/manifiesto-1971.pdf" target="_blank">
-                        <div class="doc-icon">
-                            <i class="fas fa-file-pdf"></i>
-                        </div>
-                        <div class="doc-info">
-                            <h3>Manifiesto obrero</h3>
-                            <p>1971 | Durante el gobierno de Torres</p>
-                            <span class="doc-size">PDF - 1.8 MB</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- Documento 3 -->
-                <div class="doc-item" data-category="documentos" data-year="1980">
-                    <a href="../docs/censura-1980.pdf" target="_blank">
-                        <div class="doc-icon">
-                            <i class="fas fa-file-pdf"></i>
-                        </div>
-                        <div class="doc-info">
-                            <h3>Decreto de censura</h3>
-                            <p>1980 | Durante la dictadura militar</p>
-                            <span class="doc-size">PDF - 3.1 MB</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- Documento 4 -->
-                <div class="doc-item" data-category="documentos" data-year="2001">
-                    <a href="../docs/reconocimiento-2001.pdf" target="_blank">
-                        <div class="doc-icon">
-                            <i class="fas fa-file-pdf"></i>
-                        </div>
-                        <div class="doc-info">
-                            <h3>Reconocimiento UNESCO</h3>
-                            <p>2001 | Por patrimonio cultural</p>
-                            <span class="doc-size">PDF - 4.2 MB</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
 
         <!-- Sección de Videos -->
         <section class="gallery-section" id="videos">
@@ -293,6 +145,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/galeria.js"></script>
+    <script type="module" src="skybox.js"></script>
 </body>
 </html>
